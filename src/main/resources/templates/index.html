@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Properties display</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </meta>
+    <!-- Bootstrap -->
+    <link href="webjars/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet" media="screen">
+    </link>
+</head>
+<body>
+<!--META-INF/resources/webjars/jquery/3.1.1/jquery.min.js-->
+<!--<script src="http://code.jquery.com/jquery.js"></script>-->
+
+<script src="webjars/jquery/3.1.1/jquery.min.js"></script>
+<script src="webjars/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+
+<!--property file not found-->
+<div th:if="${#maps.isEmpty(map)}">
+    <p class="lead" th:text="'No readeable props in path ' + ${path} + '!'"/>
+</div>
+
+<!--property file found and not empty-->
+<div class="container">
+    <div class="row" th:if="!${#maps.isEmpty(map)}">
+        <p class="lead" th:text="'Property file ' + ${path} + ' listed below'"/>
+        <br/>
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>Key</th>
+                <th>Value</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr th:each="element : ${map}">
+                <td th:text="${element.key}">key</td>
+                <td th:text="${element.value}">value</td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+</body>
+</html>
