@@ -1,5 +1,5 @@
 # property-display
-Based on example project with Spring Boot, Bootstrap and Thymeleaf.
+Based on example project https://github.com/joaoduraes/spring-bootstrap-thymeleaf-example with Spring Boot, Bootstrap and Thymeleaf.
 
 For more info about base example read [this blog post](http://joaoduraes.github.io/2015/02/07/spring-bootstrap-thymeleaf-example.html).
 
@@ -7,7 +7,7 @@ Installation
 --------------
 * Clone this project
 ```sh
-git clone ssh://git@git.kb.cz:7999/~rhajek/property-display.git
+git clone https://github.com/hyj4ck/property-display.git
 ```
 
 * Build Application
